@@ -1,0 +1,29 @@
+switches.main.runLearner = true;
+
+switches.learner_sw.steps = 5000;
+switches.learner_sw.initial_sensory_update = true;
+switches.learner_sw.sensoryonly_SA = dakota(1);
+switches.learner_sw.columnar_WTA = dakota(2);
+switches.learner_sw.SAfiring_check = false;
+switches.learner_sw.sensorySA_update = dakota(3);
+switches.learner_sw.activate_motor = true;
+switches.learner_sw.sensorymotor_SA = dakota(4);
+switches.learner_sw.actionWTA = true;
+switches.learner_sw.motor2SA_update = true;
+switches.learner_sw.motorSA_normalise = true;
+switches.learner_sw.SA_reset = true;
+switches.learner_sw.sensory_reset = true;
+switches.learner_sw.action_reset = true;
+
+switches.diagnostic.track_SA = true;
+switches.diagnostic.track_sensory = true;
+switches.diagnostic.decodeSA = true;
+switches.diagnostic.IT = true;
+
+switches.params.trace_learningRate = 10; %0.1; %0.001; % 0.0001
+switches.params.normalisation_threshold = 1;
+switches.params.sensory_threshold = 1; % Necessary to adjust these to compensate for different
+switches.params.motor_threshold = 0.25; % numbers of synapses to sensory and motor cells.
+switches.params.trace_threshold = 4; %0.01
+switches.params.learningRate = 100; %100
+switches.params.eta = 0.0;

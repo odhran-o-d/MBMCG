@@ -1,0 +1,41 @@
+switches.main.runController = true;
+switches.main.provide_agent = true;
+switches.main.agentGoalPositions = 'random';
+switches.main.xy_sensory = true;
+
+switches.diagnostic.track_sensory = true;
+switches.diagnostic.total_steps = true;
+switches.diagnostic.total_processing = true;
+switches.diagnostic.resultMat = true;
+switches.diagnostic.track_SA = true;
+switches.diagnostic.occupancy_grid = false;
+
+switches.control_sw.goalIterations = 100;
+switches.control_sw.controller_steps = 100;
+switches.control_sw.initial_sensory_firing = true;
+switches.control_sw.sensoryreward2SA = true;
+switches.control_sw.SAreward_bandpass = true;
+switches.control_sw.SAreward_check = 'fatal';
+switches.control_sw.propagation = 'deterministic';
+switches.control_sw.SAthreshold = true;
+switches.control_sw.SAdivisive = false;
+switches.control_sw.gate_update = true;
+switches.control_sw.gate_threshold = true;
+switches.control_sw.motor_activate = true;
+switches.control_sw.postAction_SA_WTA = true;
+switches.control_sw.reset_sensory = true;
+switches.control_sw.reset_reward = true;
+switches.control_sw.reset_SA = true;
+switches.control_sw.reset_motor = true;
+switches.control_sw.reset_chunk = true;
+switches.control_sw.reset_gate = true;
+switches.control_sw.reset_SAtrace = true;
+
+switches.params.state_noise = 0.002;
+switches.params.normalisation_threshold = 1;
+switches.params.learningRate = 100; %100
+switches.params.randomTrialDist = 1;
+switches.params.eta = 0.0;
+switches.params.worldSize_x = 10;
+switches.params.worldSize_y = 10;
+switches.params.gate_inhibition = 0.8;

@@ -1,0 +1,30 @@
+switches.main.runLearner = true;
+switches.main.text = 'Low';
+switches.main.agentGoalPositions = 'random';
+switches.main.suppressChecks = true;
+switches.main.load_walls = true;
+
+switches.diagnostic.track_SA = true;
+switches.diagnostic.track_sensory = true;
+switches.diagnostic.decodeSA = true;
+switches.diagnostic.IT = true;
+
+switches.learner_sw.steps = 5000;
+switches.learner_sw.initial_sensory_update = true;
+switches.learner_sw.activate_motor = true;
+switches.learner_sw.sensorymotor_SA = true;
+switches.learner_sw.sensorymotor_bandpass = true;
+switches.learner_sw.actionWTA = true;
+switches.learner_sw.sensorymotor2SA_update = 'M2SAonly';
+switches.learner_sw.motorSA_normalise = true;
+switches.learner_sw.sensory_reset = true;
+switches.learner_sw.action_reset = true;
+
+switches.params.sensory_threshold = 1; % Necessary to adjust these to compensate for different
+switches.params.motor_threshold = 1; % numbers of synapses to sensory and motor cells.
+switches.params.learningRate = 100; %100
+switches.params.worldSize_x = 10;
+switches.params.worldSize_y = 10;
+switches.params.sensorymotorbandpass_low = 0.5;
+switches.params.sensorymotorbandpass_high = 1.5;
+switches.params.walls = 'SmallOpen';

@@ -1,0 +1,46 @@
+switches.main.runController = true;
+switches.main.worldType = 'maze';
+switches.main.provide_agent = true;
+switches.main.diagonalActions = true;
+switches.main.text = 'High';
+switches.main.agentGoalPositions = 'set';
+switches.main.load_walls = true;
+
+switches.diagnostic.track_SA = true;
+switches.diagnostic.track_sensory = true;
+switches.diagnostic.decodeSA = false;
+switches.diagnostic.decodegate = false;
+switches.diagnostic.resultMat = false;
+switches.diagnostic.stepsMat = false;
+switches.diagnostic.processingMat = false;
+switches.diagnostic.total_steps = false;
+switches.diagnostic.total_processing = false;
+switches.diagnostic.stepsByResult = false;
+
+switches.control_sw.goalIterations = 1;
+switches.control_sw.controller_steps = 1000;
+switches.control_sw.initial_sensory_firing = true;
+switches.control_sw.sensoryreward2SA = true;
+switches.control_sw.SAreward_bandpass = true;
+switches.control_sw.SAreward_check = 'fatal';
+switches.control_sw.inhibit_states = true;
+switches.control_sw.propagation = 'deterministic';
+switches.control_sw.SAthreshold = false;
+switches.control_sw.SAdivisive = true;
+switches.control_sw.gate_update = true;
+switches.control_sw.gate_threshold = true;
+switches.control_sw.motor_activate = true;
+switches.control_sw.reset_sensory = true;
+switches.control_sw.reset_reward = true;
+switches.control_sw.reset_SA = true;
+switches.control_sw.reset_motor = true;
+switches.control_sw.reset_gate = true;
+
+switches.params.worldSize_x = 9;
+switches.params.worldSize_y = 9;
+switches.params.startPosition_x = 2;
+switches.params.startPosition_y = 3;
+switches.params.goalPosition_x = 9;
+switches.params.goalPosition_y = 3;
+switches.params.inhibited_state = [21 0.45: 15 0.6: 16 0.024];
+switches.params.walls = 'Fakhari1';

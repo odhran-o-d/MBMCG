@@ -1,0 +1,33 @@
+switches.main.runLearner = true;
+switches.main.agentGoalPositions = 'random';
+
+switches.learner_sw.steps = 5000;
+switches.learner_sw.initial_sensory_update = true;
+switches.learner_sw.sensoryonly_SA = true;
+switches.learner_sw.columnar_WTA = true;
+switches.learner_sw.SAfiring_check = true;
+switches.learner_sw.sensorySA_update = true;
+switches.learner_sw.activate_motor = true;
+switches.learner_sw.sensorymotor_SA = true;
+switches.learner_sw.actionWTA = true;
+switches.learner_sw.trace_update = true;
+switches.learner_sw.trace_normalise = true;
+switches.learner_sw.motor2SA_update = true;
+switches.learner_sw.SA2motor_update = true;
+switches.learner_sw.motorSA_normalise = true;
+switches.learner_sw.getSAtrace = true;
+switches.learner_sw.SA_reset = true;
+switches.learner_sw.sensory_reset = true;
+switches.learner_sw.action_reset = true;
+
+switches.diagnostic.track_SA = true;
+switches.diagnostic.track_sensory = true;
+switches.diagnostic.decodeSA = true;
+
+switches.params.trace_learningRate = 10; %0.1; %0.001; % 0.0001
+switches.params.normalisation_threshold = 1;
+switches.params.sensory_threshold = 1; % Necessary to adjust these to compensate for different
+switches.params.motor_threshold = 0.25; % numbers of synapses to sensory and motor cells.
+switches.params.trace_threshold = 4; %0.01
+switches.params.learningRate = 100; %100
+switches.params.eta = 0.0;

@@ -1,0 +1,41 @@
+if(Hand Empty)
+  switch(Action) {
+    case Pick Up:
+    Object Into Hand;
+    return;
+    case Otherwise:
+    Fail;
+    return;
+    }
+
+  switch(Action) {
+    case Pick Up:
+      Fail;
+      break;
+    case Put Down:
+      Object Out of Hand;
+      break;
+    case Tear:
+      if(Object Tearable)
+      Object Opened;
+      else
+      Fail;
+      break
+    case Pour:
+      if(Object Pourable) {
+        if(Object Opened)
+        Pour Object;
+        else
+        Fail;
+      }
+        else
+        Fail;
+        break;
+    case Drink:
+      if(Coffee Milky and Sugary)
+      **Success**;
+      else
+      Fail;
+      break;
+  }
+  End;
