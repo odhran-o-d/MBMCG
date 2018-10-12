@@ -1,6 +1,6 @@
 switches.main.runController = true;
 switches.main.worldType = 'maze';
-switches.main.diagonalActions = true;
+switches.main.diagonalActions = false;
 switches.main.provide_agent = true;
 switches.main.agentGoalPositions = 'random';
 switches.main.suppressChecks = true;
