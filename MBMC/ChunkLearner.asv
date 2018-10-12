@@ -346,7 +346,7 @@ for time = 1:learner_sw.steps
     % WTA:
     switch learner_sw.actionWTA
         case true
-            agent.SA_cells = WTA_Competition(agent.SA_cells(:), false);
+            agent.SA_cells = WTA_Competition(agent.SA_cells(:), fa);
             agent.SA_cells = reshape(agent.SA_cells, agent.num_SA);
         case 'CREB'
             agent.SA_cells = WTA_Competition(agent.SA_cells(:));
@@ -442,7 +442,7 @@ for time = 1:learner_sw.steps
     
     switch learner_sw.gateWTA
         case true
-            agent.gate_cells = WTA_Competition(agent.gate_cells, false);
+            agent.gate_cells = WTA_Competition(agent.gate_cells);
         case false
         otherwise
             error('Switch Error')

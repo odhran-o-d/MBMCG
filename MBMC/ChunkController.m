@@ -342,7 +342,7 @@ while true
                 else
                     agent.SA_cells = cellPropagate(agent.SA_cells, agent.sensory_cells, agent.motor_cells, agent.SA_cells, agent.sensorytoSA_synapses, agent.motortoSA_synapses, agent.SAtoSA_synapses);
                 end
-                agent.SA_cells = WTA_Competition(agent.SA_cells);
+                agent.SA_cells = WTA_Competition(agent.SA_cells, true);
                 agent.SA_trace = agent.SA_cells;
             case false
             otherwise, error('Switch Error')
