@@ -45,7 +45,7 @@ agent.num_SA = [agent.num_SAcellsinCol 1 agent.num_SAcol];                      
 agent.num_chunk = [1 round(prod(agent.num_SA)/5)];                                                          % Set layer size of chunk cells equal to a third of SA cells
 agent.num_gate = agent.num_SA;
 agent.num_gatechunk = agent.num_chunk;
-agent.num_motor_sequence_cells = [1 8];
+agent.num_motor_sequence_cells = [1 4];
 
 agent.normalisation_threshold = params.normalisation_threshold;
 agent.sensory_threshold = params.sensory_threshold; % Necessary to adjust these to compensate for different
@@ -61,7 +61,7 @@ agent.motor_cells = zeros(agent.num_motor); assert(numel(agent.motor_cells)>0);
 agent.SA_cells = zeros(agent.num_SA); assert(numel(agent.SA_cells)>0);
 agent.SA_trace = zeros(agent.num_SA); assert(numel(agent.SA_cells)>0);
 agent.chunk_cells = zeros(agent.num_chunk);
-agent.chunk_trace = zeros(agent.num_chunk);
+agent.motseq_trace = zeros(agent.num_motor_sequence_cells);
 agent.gate_cells = zeros(agent.num_gate);
 agent.gatechunk_cells = zeros(agent.num_gatechunk);
 agent.gatechunk_trace = zeros(agent.num_gatechunk);

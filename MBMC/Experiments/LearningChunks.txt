@@ -10,7 +10,7 @@ switches.diagnostic.track_sensory = true;
 switches.diagnostic.decodeSA = true;
 switches.diagnostic.decodegate = true;
 
-switches.control_sw.goalIterations = 300;
+switches.control_sw.goalIterations = 3;
 switches.control_sw.controller_steps = 1000;
 switches.control_sw.learn_chunks = true;
 switches.control_sw.useMaxPropagate = false;
@@ -65,5 +65,5 @@ switches.params.SAtochunk_learningRate = 10^26;
 switches.params.chunktoSA_learningRate = 11; %11 %0.00001 %0.000001; %0.01
 switches.params.chunk_modifier = 1.8;
 switches.params.chunk_threshold = 1;
-switches.params.chunk_eta = dakota{1};
+switches.params.chunk_eta = 0.4;
 switches.params.agent_to_load = '';

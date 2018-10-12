@@ -234,7 +234,7 @@ while true
             assignin('caller', 'first_processing', size(SA_gradient_mat, 2))
             first_action = false;
         end
-        action = world.actions{find(agent.motor_cells == max(agent.motor_cells))};
+        -        action = world.actions{find(agent.motor_cells == max(agent.motor_cells))};
 
         switch switches.main.text
             case 'Low'
