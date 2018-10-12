@@ -220,7 +220,7 @@ while true
                 agent.motor_cells = cellPropagate(agent.motor_cells, agent.gate_cells, [], [], agent.gatetomotor_synapses, [], []);
             end
             if switches.main.propagation_noise == false
-                agent.motor_cells = WTA_Competition(agent.motor_cells(:));
+                agent.motor_cells = WTA_Competition(agent.motor_cells(:), true);
             end
     end
     

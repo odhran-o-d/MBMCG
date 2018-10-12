@@ -10,7 +10,7 @@ switches.diagnostic.track_sensory = true;
 switches.diagnostic.decodeSA = true;
 switches.diagnostic.decodegate = true;
 
-switches.control_sw.goalIterations = 3;
+switches.control_sw.goalIterations = 30;
 switches.control_sw.controller_steps = 1000;
 switches.control_sw.learn_chunks = true;
 switches.control_sw.useMaxPropagate = false;

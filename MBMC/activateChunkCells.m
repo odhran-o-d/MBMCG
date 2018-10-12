@@ -39,7 +39,7 @@ switch chunkCompetitionType
         
     case 'WTA'
         
-        agent.motor_sequence_cells = WTA_Competition(agent.motor_sequence_cells);
+        agent.motor_sequence_cells = WTA_Competition(agent.motor_sequence_cells, true);
         
     case 'none'
         
