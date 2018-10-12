@@ -45,7 +45,7 @@ agent.num_SA = [agent.num_SAcellsinCol 1 agent.num_SAcol];                      
 agent.num_chunk = [1 round(prod(agent.num_SA)/5)];                                                          % Set layer size of chunk cells equal to a third of SA cells
 agent.num_gate = agent.num_SA;
 agent.num_gatechunk = agent.num_chunk;
-agent.num_motor_sequence_cells = [1 10];
+agent.num_motor_sequence_cells = [1 8];
 
 agent.normalisation_threshold = params.normalisation_threshold;
 agent.sensory_threshold = params.sensory_threshold; % Necessary to adjust these to compensate for different
@@ -65,6 +65,7 @@ agent.chunk_trace = zeros(agent.num_chunk);
 agent.gate_cells = zeros(agent.num_gate);
 agent.gatechunk_cells = zeros(agent.num_gatechunk);
 agent.gatechunk_trace = zeros(agent.num_gatechunk);
+agent.motor_sequence_cells = zeros(agent.num_motor_sequence_cells);
 
 % Create synapse weights between SA cells and motor<=>SA.
 agent.SAtoSA_synapses = GenerateZeroWeights(numel(agent.SA_cells), numel(agent.SA_cells), 1);
@@ -102,8 +103,10 @@ agent.chunktoSA_synapses = zeros(numel(agent.chunk_cells), numel(agent.SA_cells)
 agent.gatetogatechunk_synapses = Generate_Diluted_Weights(zeros(agent.num_gate), zeros(agent.num_gatechunk), params.chunk_dilution, params.chunk_weights);
 agent.gatechunktogate_synapses = zeros(numel(agent.gatechunk_cells), numel(agent.gate_cells));
 
-% Create agent
+% Create Motor sequence neurons
+
 agent.MotortoMotorSequence_synapses = Generate_Diluted_Weights(zeros(agent.num_motor), zeros(agent.num_motor_sequence_cells), params.chunk_dilution, params.chunk_weights);
+agent.MotorSequencetoMotor_synapses = zeros(numel(agent.motor_cells), numel(agent.motor_sequence_cells));
 
 % Normalise synapses
 nan_check = true;
